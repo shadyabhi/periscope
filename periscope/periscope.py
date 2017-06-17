@@ -51,7 +51,7 @@ class Periscope:
                 folder = os.path.dirname(self.config_file)
                 if not os.path.exists(folder):
                     logging.info("Creating folder %s" %folder)
-                    os.mkdir(folder)
+                    os.makedirs(folder)
                 logging.info("Creating config file")
                 configfile = open(self.config_file, "w")
                 self.config.write(configfile)
